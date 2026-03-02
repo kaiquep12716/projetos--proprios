@@ -6,16 +6,44 @@
     span#burguer{
         display: none;
     }
-
     menu{
         display: block;
     }
+    
+    header h2{
+    display: block;
+    color: var(--destaque);
+    font-size: 2.5em;
+    }
 
-    menu li{
-        display: inline-block;
+    #top-header{
+        flex-flow: row nowrap;
     }
+
+    #itens ul{
+        flex-flow: row nowrap;
+    }
+    
     main{
-        width: 768px;
+        grid-template-columns: 10% 1fr 10%;
     }
+    section{
+        grid-column: 2;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 

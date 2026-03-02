@@ -9,23 +9,33 @@
     <link rel="stylesheet" href="media-query.css">
     <title>Barbearia</title>
 </head>
-<body onresize="mudouTamanho()">
+<body>
     <header>
-        <div id="icon">
+        <div id="top-header">
+            <div id="icon">
+            </div>
+            <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+                menu
+            </span>
 
+            <h2>Barbearia Corte Fino</h2>
+
+            <div id="agendar">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </div>
-        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
-            menu
-        </span>
-         <nav class="menu">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+
+
+
+          <menu id="itens">
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </menu>
+
 
        <!-- <nav id="nav">
             <ul class="nav-list">
@@ -37,9 +47,7 @@
         </nav>-->
 
         
-        <div id="agendar">
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
+        
     </header>
 
     <main>
@@ -73,6 +81,15 @@
             </div>
         </section>
 
+        <section class="funcionamento">
+            <h2>Funcionamento</h2>
+            <p>Consulte nossos horários para agendamento</p>
+            <div class="horario"><p>Segunda a sexta</p><h3>8h00-19h30</h3></div>
+            <div class="horario"><p>Sábado</p><h3>8h00-15h30</h3></div>
+            <div class="horario"><p>Domingo</p><h3>Fechado</h3></div>
+        </section>
+
+        
 
 
         <section id="sobre">
@@ -97,22 +114,36 @@
 
         <p>Endereço: Rua Exemplo, 123 — Belo Horizonte</p>
         <p>Telefone: (31) 99999-9999</p>
-        <p>Horário de atendimento: Seg a Sáb — 09h às 20h</p>
+        
 
     </footer>
 
 
-    <script src="https://kit.fontawesome.com/b8a01a7fe3.js" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b8a01a7fe3.js" crossorigin="anonymous"></script>
 
-       const burger = document.getElementById("burguer");
-       const menu = document.querySelector("menu");
-
-        burger.addEventListener("click", () => {
-            menu.classList.toggle("open");
-         });
+    <script>
+        window.addEventListener('load', function(){
+    console.log(document.getElementById('itens'))
+})
 
 
-    </script>
+     function clickMenu(){
+        const itens = document.getElementById('itens')
+        itens.classList.toggle('ativo')
+    }
+
+    function mudouTamanho(){
+        const itens = document.getElementById('itens')
+        if(window.innerWidth >= 768){
+            itens.classList.add('ativo')
+        } else {
+            itens.classList.remove('ativo')
+        }
+    }
+
+    window.addEventListener('resize', mudouTamanho)
+    window.addEventListener('load', mudouTamanho)
+</script>
     
 
 </body>
