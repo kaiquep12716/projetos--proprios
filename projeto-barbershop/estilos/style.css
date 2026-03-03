@@ -77,7 +77,7 @@ menu {
 
 menu.ativo {
     display: block;
-    
+   
 }
 
 
@@ -107,9 +107,19 @@ menu a{
     color: var(--destaque);
 } 
 
+menu a:hover{
+    text-decoration: underline;
+    transition-duration: 0.2s;
+    color: #f7d199;
+}
+
 #agendar{
     width: 100px;
     text-align: right;
+}
+
+#agendar i:hover{
+    color: #f7d199;
 }
 
 header i{
@@ -156,6 +166,9 @@ main{
     
 }
 
+section{
+    padding: 60px 20px;
+}
 
 #hero{
     display: flex;
@@ -165,7 +178,7 @@ main{
     background-size: cover;
     background-position: center;
     color: var(--texto);
-    padding: 10px;
+    text-align: center;
     height: 600px;
     justify-content: center;
   
@@ -176,7 +189,9 @@ main{
     font-family: 'Playfair Display', serif;
 }
 #hero p{
-    margin-top: 10px;
+    margin: 20px auto 0 auto;
+    line-height: 1.6;
+    max-width: 600px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
@@ -194,7 +209,7 @@ main{
     background-position: center;
     gap: 60px;
     color: var(--texto);
-    padding: 15px;
+   
     height: 700px;
     justify-content: center;
     
@@ -213,7 +228,8 @@ main{
     justify-content: space-between;
 }
 #cortes{
-    margin-top: 30px;
+    margin: 0 auto;
+    max-width: 600px;
 }
 #servicos p{
     font-family: 'Montserrat', sans-serif;
@@ -231,7 +247,7 @@ main{
 .funcionamento .horario{
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 10px;
     background-color: #1c1c1c44;
 }
 
@@ -261,9 +277,9 @@ main{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 10px;
+  
     gap:10px;
-    padding: 0px 30px;
+   
     height: 500px;
     justify-content: center;
 }
@@ -284,12 +300,19 @@ main{
     color: var(--texto);
     text-align: justify;
     margin: 0px 10px;
+    max-width: 700px;
+    line-height: 1.6;
 }
 footer{
     background-color: black;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    padding: 10px;
     font-size: 0.75em;
     line-height: 1.5;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p{
+    margin: 5px 0;
 }
