@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+ --primary: #f5b400;
+ --dark: #0f0f0f;
+ --gray: #1c1c1c;
+ --light: #ffffff;
+}
+
+/*Fontes
+font-family: 'Poppins', sans-serif; - texto
+font-family: 'Bebas Neue', sans-serif; - titulo
+*/
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: var(--dark);
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+header > .logo{
+    background-image: url(./assets/icons/2215d4d2-4d67-40e3-ab06-cf95d27aaf08.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+#menu > ul{
+    display: flex;
+    list-style: none;
+}
+
+#menu li{
+    margin-right: 10px;
+}
+
+#menu a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+body{
+    font-family: 'Poppins', sans-serif; 
+    color: var(--light);
+    background-color: var(--gray);
+    
+}
+
+h1,h2,h3{
+    font-family: 'Bebas Neue', sans-serif; 
+    color: var(--primary);
+    font-weight: lighter;
+}
+
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding: 20px;
+}
+
+/*Section hero*/
+
+#hero .container{
+    display: grid;
+    align-items: center;
+    background-color: var(--dark);
+    padding: 15px;
+    border-radius: 10px;
+  
+    
+}
+
+.hero-image{
+    background-image: url(assets/images/pexels-anete-lusina-16513597.jpg);
+    background-size: cover;
+    height: 300px;
+    border-radius: 10px;
+    
+}
+
+#hero h1{
+    text-align: center;
+}
+
+
+.hero-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px;
+}
+.hero-buttons a{
+    text-decoration: none;
+    color: white;
+    background-color: #1c1c1c;
+    border: 1px solid var(--primary) ;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+
+/*Section sobre*/
+
+
+#sobre .container{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    background-color: var(--dark);
+    border-radius: 10px;
+    gap: 20px;
+
+}
+
+.sobre-text{
+    padding: 15px;
+    text-align: justify;
+}
+
+.sobre-image{
+    background-image: url(./assets/images/pexels-jonathanborba-13885345.jpg);
+    grid-column: 2;
+    grid-row: 1 / -1;
+    background-size: cover;
+    width: 90%;
+    height: 100%;
+    justify-self: flex-end;
+    border-radius: 0px 10px;
+}
+
+#sobre a{
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-decoration: none;
+    color: var(--light);
+    padding: 15px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 60%;
+    text-align: center;
+}
+
+/*BENEFICIOS*/
+
+#beneficios .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 250px 250px;
+    gap: 5px;
+}
+.container .card{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.25s ease, border 0.25s ease;
+    
+}
+#beneficios i{
+    font-size: 3em;
+    color: var(--primary);
+    margin-bottom: 15px;
+    
+}
+
+#beneficios .card:hover {
+  transform: translateY(-6px);
+  border: 1px solid #f5b400;
+}
+
+/*Planos*/
+
+#planos .container{
+    display: grid;
+    grid-template-rows: 250px 250px 250px;
+    gap: 5px;
+    font-weight: bolder;
+}
+#planos .card{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.25s ease, border 0.25s ease;
+    
+}
+#planos li{
+    list-style: none;
+}
+
+#planos a{
+    text-decoration: none;
+    color: var(--primary);
+    background-color: var(--dark);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+}
+
+#planos #basico{
+    background-color: rgb(41, 41, 41);
+    border: 3px solid var(--dark);
+}
+
+#premium{
+    border: 1px solid var(--primary);
+}
+
+#planos #vip{
+    background-color: var(--primary);
+    border: 2px solid var(--light);
+}
+
+#vip h2{
+    color: var(--light);
+}
+
+#vip a{
+    border: 1px solid var(--light);
+    color: var(--light);
+    
+}
