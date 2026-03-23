@@ -46,9 +46,13 @@ header > .logo{
 }
 
 #menu a{
-    text-decoration: none;
-    color: var(--primary);
+    position: relative;
+  color: #ffb300;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
 }
+
 
 body{
     font-family: 'Poppins', sans-serif; 
@@ -99,11 +103,17 @@ main{
     display: flex;
     justify-content: space-evenly;
     margin: 15px;
+    
 }
+.hero-buttons a:hover{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
 .hero-buttons a{
     text-decoration: none;
     color: white;
-    background-color: #1c1c1c;
+    transition-duration: 0.2s;
     border: 1px solid var(--primary) ;
     padding: 15px 25px;
     border-radius: 10px;
@@ -149,6 +159,12 @@ main{
     margin-bottom: 15px;
     width: 60%;
     text-align: center;
+    transition-duration: 0.2s;
+}
+
+#sobre a:hover{
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 /*BENEFICIOS*/
@@ -217,6 +233,12 @@ main{
     border-radius: 10px;
     padding: 15px;
     width: 100%;
+    transition-duration: 0.2s;
+}
+
+#planos a:hover{
+    transform: scale(1.03);
+    filter: brightness(1.1);
 }
 
 #planos #basico{
@@ -242,3 +264,89 @@ main{
     color: var(--light);
     
 }
+
+
+#contato fieldset{
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    padding: 20px;
+    background: var(--dark);
+}
+
+#contato legend{
+    color: var(--primary);
+    font-weight: bolder;
+    font-size: 1.7rem;
+    padding: 0 10px;
+    font-family: 'Bebas Neue', sans-serif;;
+
+}
+
+#contato label{
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+#contato input, #contato textarea{
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    background: var(--dark);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    color: var(--primary);
+}
+
+#contato input:focus, #contato textarea:focus{
+
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 5px var(--primary);
+
+}
+
+#contato .button{
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, var(--primary) , #ff8c00);
+    border: none;
+    border-radius: 8px;
+    color: var(--dark);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover{
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+footer{
+    display: flex;
+    flex-flow: column-reverse;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+footer a{
+    font-size: 1.6em;
+    color:var(--primary);
+    margin: 0 5px
+}
+footer .footer-social{
+    margin: 0 10px;
+    align-self: flex-start;
+    
+}
+

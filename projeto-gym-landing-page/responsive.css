@@ -1,1 +1,111 @@
 @charset "UTF-8";
+
+@media screen and (min-width:550px){
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#hero{
+    grid-column: 1 / 4;
+}
+
+#sobre{
+    grid-column: 1 / 4;
+}
+#beneficios{
+    grid-column: 1 / 4;
+}
+
+#beneficios .container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#planos{
+    grid-column: 1 / 4;
+    padding: 17px;
+}
+#planos .container{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+}
+#planos .container .card{
+    
+    width: 100%;
+    height: 100%;
+
+}
+
+#planos a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+}
+#contato{
+    grid-column: 1 / 4;
+    
+}
+
+#contato .container{
+    height: 100%;
+}
+
+#contato form{
+    height: 100%;
+}
+
+}
+
+@media screen and (min-width:768px){
+
+
+main{
+    grid-template-columns: 1fr 1fr;
+}
+
+#contato{
+    grid-column: span 1;
+    grid-row: 4 / 5;
+}
+#planos .container{
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+
+}
+#planos{
+    grid-column: span 2;
+
+}
+#planos .card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#planos .card a{
+    grid-column: 2 / 2;
+}
+
+#planos .card ul{
+    grid-column: 1 / 1;
+}
+}
+
+@media screen and (min-width: 928px){
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+    #hero{
+        grid-column: 1 / 1;
+    }
+    #sobre{
+        grid-column: 2 / 2;
+    }
+
+    #contato{
+        grid-row: 3 / 4;
+    }
+}
