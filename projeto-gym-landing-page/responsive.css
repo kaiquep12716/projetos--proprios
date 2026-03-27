@@ -5,11 +5,15 @@
 main{
     display: grid;
     grid-template-columns: 1fr;
+  
 }
 
 #hero{
     grid-column: 1 / 4;
+    margin: auto;
 }
+
+
 
 #sobre{
     grid-column: 1 / 4;
@@ -61,6 +65,45 @@ main{
 }
 
 @media screen and (min-width:768px){
+
+header{
+    
+}
+
+.menu-toggle{
+  display: none;
+ }
+ 
+#menu{
+    display: block;
+    
+}
+
+#menu > ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+    right: 0;
+    top: 0;
+    background: none;
+    width: auto;
+    height: auto;
+    flex-flow: row nowrap;
+    transition-duration: 0s;
+}
+
+#menu li{
+    margin-right: 10px;
+}
+
+#menu a{
+  position: relative;
+  color: #ffb300;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
 
 
 main{
