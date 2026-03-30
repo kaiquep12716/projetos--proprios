@@ -1,13 +1,24 @@
+const header = document.querySelector("header")
 const menuToggle = document.querySelector(".menu-toggle")
-const nav = document.querySelector("#menu")
+const menu = document.querySelector("#menu")
 
+// função central (ESSENCIAL)
+function updateHeader(){
+  const isScrolled = window.scrollY > 50
+  const isMenuOpen = menu.classList.contains("active")
 
+  if(isScrolled || isMenuOpen){
+    header.classList.add("scrolled")
+  } else {
+    header.classList.remove("scrolled")
+  }
+}
+
+// scroll
+window.addEventListener("scroll", updateHeader)
+
+// clique no menu
 menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("active")
+  menu.classList.toggle("active")
+  updateHeader() // atualiza após abrir/fechar
 })
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        nav.classList.remove('active');
-    }
-});

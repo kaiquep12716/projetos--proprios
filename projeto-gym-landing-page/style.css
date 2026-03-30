@@ -22,16 +22,32 @@ font-family: 'Bebas Neue', sans-serif; - titulo
 
 header{
     display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
     height: 100px;
+    width: 100%;
     background-color: var(--dark);
     align-items: center;
     font-family: 'Poppins', sans-serif;
-     background: linear-gradient(
+    background-color: rgba(0, 0, 0, 0.596);
+    /*box-shadow: -1px 9px 7px 7px rgba(0, 0, 0, 0.596);;*/
+    padding: 0 2%;
+    background: linear-gradient(
   to bottom,
   rgba(0,0,0,0.9),
   transparent);
+    
+   
   
+}
+
+header.scrolled{
+    background: var(--dark);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px var(--dark);
+    height: 100px;
 }
 
 header > .logo{
@@ -72,7 +88,7 @@ header > .logo{
     justify-content: flex-start;
     padding-top: 15px;
     gap: 30px;
-
+    z-index: 999;
     transition: 0.3s;
     
 }
@@ -116,6 +132,7 @@ body{
     color: var(--light);
     background-color: var(--gray);
     
+    
 }
 
 h1,h2,h3{
@@ -125,10 +142,12 @@ h1,h2,h3{
 }
 
 main{
+    margin-top: 100px;
     display: flex;
     flex-flow: column nowrap;
     gap: 2rem;
     padding: 20px;
+    
 }
 
 /*Section hero*/
