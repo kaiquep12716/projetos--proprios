@@ -38,7 +38,7 @@ header{
   to bottom,
   rgba(0,0,0,0.9),
   transparent);
-    
+    z-index: 9999;
    
   
 }
@@ -58,12 +58,26 @@ header > .logo{
     height: 100%;
 }
 
+.hero-buttons > a.destaque{
+    background-color: var(--primary);
+    font-weight: bolder;
+    font-size: 18px;
+    color: var(--dark);
+    
+}
+
+.hero-buttons > a.destaque:hover{
+     filter: brightness(1.1);
+     box-shadow: 0px 0px 4px 1px var(--primary);
+}
+
 #menu{
     display: block;
     
 }
  #menu.active{
     display: block;
+    
     
 
     
@@ -150,6 +164,8 @@ main{
     
 }
 
+
+
 /*Section hero*/
 
 #hero .container{
@@ -161,12 +177,14 @@ main{
     gap: 10px;
     text-align: center;
     max-width: 700px;
+    padding-bottom: 20px;
   
     
 }
 
 .hero-image{
-    background-image: url(assets/images/pexels-anete-lusina-16513597.jpg);
+    background-image: url(assets/images/pexels-alesiakozik-7289238.jpg);
+    background-position: 50% 30%;
     background-size: cover;
     height: 300px;
     border-radius: 10px;
@@ -200,7 +218,20 @@ main{
     border: 1px solid var(--primary) ;
     padding: 15px 45px;
     border-radius: 10px;
+   
     
+}
+
+.hero-alunos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    
+}
+.hero-alunos i{
+    font-size: 1.7em;
 }
 
 
@@ -272,12 +303,15 @@ main{
     transition: transform 0.25s ease, border 0.25s ease;
     
 }
+
 #beneficios i{
     font-size: 3em;
     color: var(--primary);
     margin-bottom: 15px;
     
 }
+
+
 
 #beneficios .card:hover {
   transform: translateY(-6px);
@@ -328,6 +362,10 @@ main{
 #planos #basico{
     background-color: rgb(41, 41, 41);
     border: 3px solid var(--dark);
+}
+
+#basico a{
+    background-color: rgb(41, 41, 41);
 }
 
 #premium{
@@ -393,6 +431,11 @@ main{
 
 }
 
+#msgid{
+    height: 150px;
+   
+}
+
 #contato .button{
     width: 100%;
     padding: 14px;
@@ -400,7 +443,9 @@ main{
     border: none;
     border-radius: 8px;
     color: var(--dark);
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -421,6 +466,9 @@ footer{
     text-align: center;
     padding-top: 15px;
     padding-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 footer a{
@@ -430,7 +478,7 @@ footer a{
 }
 footer .footer-social{
     margin: 0 10px;
-    align-self: flex-start;
+   
     
 }
 

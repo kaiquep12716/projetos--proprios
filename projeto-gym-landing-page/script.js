@@ -22,3 +22,19 @@ menuToggle.addEventListener("click", () => {
   menu.classList.toggle("active")
   updateHeader() // atualiza após abrir/fechar
 })
+
+const navLinks = document.querySelectorAll('#menu ul a.link');
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const headerHeight = document.querySelector('header').offsetHeight;
+      const targetPosition = target.offsetTop - headerHeight - 30;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
