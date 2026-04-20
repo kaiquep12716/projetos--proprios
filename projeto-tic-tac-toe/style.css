@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body{
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background-color 0.2s;
+}
+
+main{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+
+div{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    background-image: url(white.png);
+    transition-duration: 0.4s;
+    
+}
