@@ -5,14 +5,24 @@
 main{
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0;
+    gap: 20px 0;
+    margin: 0 20px;
+    margin-top: 130px;
+ 
+  
 }
 
 #hero{
-    grid-column: 1 / 4;
+    grid-column: 1;
+    
 }
 
+
 #sobre{
-    grid-column: 1 / 4;
+    grid-column: 1;
+   
+    
 }
 #beneficios{
     grid-column: 1 / 4;
@@ -62,50 +72,92 @@ main{
 
 @media screen and (min-width:768px){
 
-
 main{
-    grid-template-columns: 1fr 1fr;
+   grid-template-columns: 400px 1fr;
+    justify-items: center;
+    align-items: center;
+    }
+
+
+#hero,#sobre{
+    grid-column: 1 / -1;
 }
 
 #contato{
-    grid-column: span 1;
-    grid-row: 4 / 5;
+    grid-column: 1;
+    padding: 10px;
 }
-#planos .container{
 
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-
+#beneficios{
+    grid-column: 2;
+    grid-row: 4;
 }
-#planos{
-    grid-column: span 2;
-
-}
-#planos .card{
-    display: grid;
+#beneficios .container{
     grid-template-columns: 1fr 1fr;
-}
-#planos .card a{
-    grid-column: 2 / 2;
+    grid-template-rows: 1fr 1fr;
 }
 
-#planos .card ul{
-    grid-column: 1 / 1;
+#beneficios{
+    padding: 20px;
+    gap: 10px;
+}
+
+#hero .container{
+    min-width: 700px;
+    max-width: 900px;
+}
+
+#sobre .container{
+   
+    min-width: 700px;
+    max-width: 900px;
+}
+
+.menu-toggle{
+  display: none;
+ }
+ 
+#menu{
+    display: block;
+    
+}
+
+#menu > ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+    right: 0;
+    top: 0;
+    background: none;
+    width: auto;
+    height: auto;
+    flex-flow: row nowrap;
+    transition-duration: 0s;
+}
+
+#menu li{
+    margin-right: 10px;
+}
+
+#menu a{
+  position: relative;
+  color: #ffb300;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
 }
 }
 
-@media screen and (min-width: 928px){
+@media screen and (min-width:1920px){
+    
     main{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 700px 1fr 300px ;
     }
-    #hero{
-        grid-column: 1 / 1;
-    }
-    #sobre{
-        grid-column: 2 / 2;
-    }
-
+    
+    section{
+  padding: 40px 0;
+ }
     #contato{
-        grid-row: 3 / 4;
+        margin-left:250px;
     }
 }

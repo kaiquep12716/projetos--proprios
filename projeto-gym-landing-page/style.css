@@ -11,6 +11,7 @@
  --dark: #0f0f0f;
  --gray: #1c1c1c;
  --light: #ffffff;
+ --gray-lighter: #292929;
 }
 
 /*Fontes
@@ -21,24 +22,89 @@ font-family: 'Bebas Neue', sans-serif; - titulo
 
 header{
     display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
     height: 100px;
+    width: 100%;
     background-color: var(--dark);
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.596);
+    /*box-shadow: -1px 9px 7px 7px rgba(0, 0, 0, 0.596);;*/
+    padding: 0 2%;
+    background: linear-gradient(
+  to bottom,
+  rgba(0,0,0,0.9),
+  transparent);
+    z-index: 9999;
+   
+  
+}
+
+header.scrolled{
+    background: var(--dark);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px var(--dark);
+    height: 100px;
 }
 
 header > .logo{
-    background-image: url(./assets/icons/2215d4d2-4d67-40e3-ab06-cf95d27aaf08.png);
+    background-image: url(./assets/icons/d23e4b95-b3b1-4d0f-b037-5a097a5b007b.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
     height: 100%;
 }
 
+.hero-buttons > a.destaque{
+    background-color: var(--primary);
+    font-weight: bolder;
+    font-size: 18px;
+    color: var(--dark);
+    
+}
+
+.hero-buttons > a.destaque:hover{
+     filter: brightness(1.1);
+     box-shadow: 0px 0px 4px 1px var(--primary);
+}
+
+#menu{
+    display: block;
+    
+}
+ #menu.active{
+    display: block;
+    
+    
+
+    
+ }
+
+ #menu.active > ul{
+    right: 0;
+ }
+
+
 #menu > ul{
-    display: flex;
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    width: 30%;
+    height: calc(100vh - 100px);
+    background: var(--dark);
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 15px;
+    gap: 30px;
+    z-index: 999;
+    transition: 0.3s;
+    
 }
 
 #menu li{
@@ -53,11 +119,33 @@ header > .logo{
   font-weight: 500;
 }
 
+#menu a::after{
+ content: "";
+ position: absolute;
+ width: 0;
+ height: 2px;
+ bottom: -5px;
+ left: 0;
+ background: var(--primary);
+ transition: 0.3s;
+}
+
+#menu a:hover::after{
+ width: 100%;
+}
+
+.menu-toggle{
+ display: block;
+ font-size: 28px;
+ cursor: pointer;
+}
+
 
 body{
     font-family: 'Poppins', sans-serif; 
     color: var(--light);
     background-color: var(--gray);
+    
     
 }
 
@@ -68,11 +156,15 @@ h1,h2,h3{
 }
 
 main{
+    margin-top: 100px;
     display: flex;
     flex-flow: column nowrap;
     gap: 2rem;
     padding: 20px;
+    
 }
+
+
 
 /*Section hero*/
 
@@ -82,12 +174,17 @@ main{
     background-color: var(--dark);
     padding: 15px;
     border-radius: 10px;
+    gap: 10px;
+    text-align: center;
+    max-width: 700px;
+    padding-bottom: 20px;
   
     
 }
 
 .hero-image{
-    background-image: url(assets/images/pexels-anete-lusina-16513597.jpg);
+    background-image: url(assets/images/pexels-alesiakozik-7289238.jpg);
+    background-position: 50% 30%;
     background-size: cover;
     height: 300px;
     border-radius: 10px;
@@ -96,6 +193,8 @@ main{
 
 #hero h1{
     text-align: center;
+    font-size: 56px;
+    font-weight: bolder;
 }
 
 
@@ -103,6 +202,8 @@ main{
     display: flex;
     justify-content: space-evenly;
     margin: 15px;
+    gap: 10px;
+    
     
 }
 .hero-buttons a:hover{
@@ -115,8 +216,22 @@ main{
     color: white;
     transition-duration: 0.2s;
     border: 1px solid var(--primary) ;
-    padding: 15px 25px;
+    padding: 15px 45px;
     border-radius: 10px;
+   
+    
+}
+
+.hero-alunos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    
+}
+.hero-alunos i{
+    font-size: 1.7em;
 }
 
 
@@ -126,7 +241,7 @@ main{
 #sobre .container{
     display: grid;
     grid-template-columns: 150px 1fr;
-    background-color: var(--dark);
+    background-color: var(--gray-lighter);
     border-radius: 10px;
     gap: 20px;
 
@@ -188,12 +303,15 @@ main{
     transition: transform 0.25s ease, border 0.25s ease;
     
 }
+
 #beneficios i{
     font-size: 3em;
     color: var(--primary);
     margin-bottom: 15px;
     
 }
+
+
 
 #beneficios .card:hover {
   transform: translateY(-6px);
@@ -244,6 +362,10 @@ main{
 #planos #basico{
     background-color: rgb(41, 41, 41);
     border: 3px solid var(--dark);
+}
+
+#basico a{
+    background-color: rgb(41, 41, 41);
 }
 
 #premium{
@@ -309,6 +431,11 @@ main{
 
 }
 
+#msgid{
+    height: 150px;
+   
+}
+
 #contato .button{
     width: 100%;
     padding: 14px;
@@ -316,7 +443,9 @@ main{
     border: none;
     border-radius: 8px;
     color: var(--dark);
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -337,6 +466,9 @@ footer{
     text-align: center;
     padding-top: 15px;
     padding-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 footer a{
@@ -346,7 +478,7 @@ footer a{
 }
 footer .footer-social{
     margin: 0 10px;
-    align-self: flex-start;
+   
     
 }
 

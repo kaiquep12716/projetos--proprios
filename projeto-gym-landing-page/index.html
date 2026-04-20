@@ -14,12 +14,13 @@
 <body>
     <header>
         <div class="logo"></div>
+        <div class="menu-toggle">☰</div>
         <nav id="menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Planos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#hero" class="link">Home</a></li>
+                <li><a href="#sobre" class="link">Sobre</a></li>
+                <li><a href="#planos" class="link">Planos</a></li>
+                <li><a href="#contato" class="link">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -29,15 +30,19 @@
             <div class="container">
                 <div class="hero-text">
                     <h1>Transforme Seu Corpo</h1>
-                    <p>Treine com os melhores equipamentos e alcance seus objetivos</p>
+                    <p>Treine com os <strong>melhores equipamentos</strong> e alcance <strong>seus objetivos</strong></p>
                 </div>
 
                 <div class="hero-image"></div>
 
                 
                 <div class="hero-buttons">
-                    <a href="#">Começar</a>
+                    <a href="#" class="destaque">Garantir minha vaga!</a>
                     <a href="#">Ver planos</a>
+                </div>
+
+                <div class="hero-alunos">
+                    <i class="fa-solid fa-people-group"></i><p>+500 alunos transformados</p>
                 </div>
 
             </div>
@@ -60,23 +65,23 @@
             <div class="container">
                 <div class="card">
                     <i class="fa-solid fa-dumbbell"></i>
-                    <h2>Equipamentos Modernos</h2>
-                    <p>Equipamentos de última geração para treinos eficientes e seguros.</p>
+                    <h2>Tecnologia de Ponta</h2>
+                    <p>Equipamentos de última geração para treinos <strong>eficientes e seguros.</strong></p>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-user-graduate"></i>
-                    <h2>Personal Trainers</h2>
-                    <p>Profissionais qualificados para acompanhar sua evolução.</p>
+                    <h2>Apoio Individualizado</h2>
+                    <p><strong>Profissionais qualificados</strong> para acompanhar sua evolução.</p>
                 </div>
                 <div class="card">
                     <i class="fa-regular fa-clock"></i>
                     <h2>Aberto 24h</h2>
-                    <p>Treine no horário que for melhor para sua rotina.</p>
+                    <p>Treine no <strong>horário que for melhor para sua rotina.</strong></p>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-person-arrow-up-from-line"></i>
-                    <h2>Ambiente Motivador</h2>
-                    <p>Espaço pensado para motivar e maximizar resultados.</p>
+                    <h2>Comunidade Ativa</h2>
+                    <p>Um espaço onde a energia te empurra para o <strong>próximo nível.</strong></p>
                 </div>
             </div>
         </section>
@@ -85,30 +90,30 @@
             <div class="container">
                 <div class="card" id="basico">
                     <h2>Básico</h2>
-                    <p>R$79,00</p>
+                    <p>R$79,00 / Mês</p>
                     <ul>
-                        <li>Musculação</li>
-                        <li>Cardio</li>
+                        <li><i class="fa-solid fa-check"></i> Musculação</li>
+                        <li><i class="fa-solid fa-check"></i> Cardio</li>
                     </ul>
-                    <a href="#">Assinar</a>
+                    <a href="#">Quero o básico</a>
                 </div>
                 <div class="card" id="premium">
-                    <h2>Premium</h2>
-                    <p>R$119,00</p>
+                    <h2>Premium <i class="fa-solid fa-award"></i></h2>
+                    <p>R$119,00 / Mês</p>
                     <ul>
-                        <li>Tudo do plano básico</li>
-                        <li>Aulas</li>
+                        <li><i class="fa-solid fa-check"></i> Tudo do plano básico</li>
+                        <li><i class="fa-solid fa-check"></i> Aulas</li>
                     </ul>
-                    <a href="#">Assinar</a>
+                    <a href="#">Quero ser Premium</a>
                 </div>
                 <div class="card" id="vip">
                     <h2>Vip</h2>
-                    <p>R$159,00</p>
+                    <p>R$159,00 / Mês</p>
                     <ul>
-                        <li>Tudo do plano Premium</li>
-                        <li>Personal</li>
+                        <li><i class="fa-solid fa-check"></i> Tudo do plano Premium</li>
+                        <li><i class="fa-solid fa-check"></i> Personal</li>
                     </ul>
-                    <a href="#">Assinar</a>
+                    <a href="#">Quero ser Vip</a>
                 </div>
             </div>
         </section>
@@ -118,7 +123,7 @@
                  <form action="cadastro.php" method="get">
 
         <fieldset>
-            <legend>Contato</legend>
+            <legend>Ainda tem dúvidas? Vamos conversar!</legend>
                 
                  <p>
                     <label for="nomeid">Nome</label>
@@ -137,7 +142,7 @@
                     <input type="text" name="msg" id="msgid">
                 </p>
                 
-                <p><input type="submit" value="Enviar" class="button"></p>
+                <p><input type="submit" value="Tirar minhas duvídas" class="button"></p>
         </fieldset>
 
        
@@ -151,10 +156,16 @@
         <div class="footer-image">
 
         </div>
+
+        <p>Rua Exemplo, 123 - Centro, São Paulo</p>
+        <p>Seg à Sex: 06h às 23h | Sáb e Dom: 08h às 14h</p>
+
         <div class="footer-social">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            
+            
         </div>
 
         <p>© 2026 Academia PowerFit</p>
